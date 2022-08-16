@@ -32,6 +32,10 @@
   
 }
 
+.number12 {
+  color: #0000ff;
+}
+
 .number1 {
   --rotation: 30deg;
 }
@@ -40,6 +44,7 @@
 }
 .number3 {
   --rotation: 90deg;
+  color: #ff0000;
 }
 .number4 {
   --rotation: 120deg;
@@ -49,6 +54,7 @@
 }
 .number6 {
   --rotation: 180deg;
+  color: #0000ff;
 }
 .number7 {
   --rotation: 210deg;
@@ -58,6 +64,7 @@
 }
 .number9 {
   --rotation: 270deg;
+  color: #ff0000;
 }
 .number10 {
   --rotation: 300deg;
@@ -67,15 +74,17 @@
 }
 
 .hand {
+  --rotation: 0;
   position: absolute;
   height: 45%;
   width: 7px;
   left: 50%;
   bottom: 50%;
-  transform: translate(-50%);
+  transform: rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  transform-origin: bottom;
+  z-index: 2;
 }
 
 .second-hand {
@@ -97,16 +106,13 @@
 .clock::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background: #333;
   border-radius: 50%;
   left: 50%;
-  bottom: 50%;
+  bottom: 48%;
   transform: translate(-50%);
-  z-index: 2;
+  z-index: 4;
 }
 
-.hand {
-  transform: rotate(30deg);
-}
