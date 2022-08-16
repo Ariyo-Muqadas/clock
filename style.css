@@ -53,8 +53,8 @@
   --rotation: 150deg;
 }
 .number6 {
-  --rotation: 180deg;
   color: #0000ff;
+  margin-top: 268px;
 }
 .number7 {
   --rotation: 210deg;
